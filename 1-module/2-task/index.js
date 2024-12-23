@@ -10,7 +10,14 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  // первая проверка на undefinded
+  // вторая проверка на наличие пробелов, вместо indexOf можно использовать цикл и перебирать все символы name до появления пробела
+  // третья проверка на длину строки
+  if (name && name.indexOf(' ') == -1 && name.length >= 4) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function sayHello() {
